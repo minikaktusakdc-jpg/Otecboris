@@ -1,3 +1,4 @@
+```bat
 @echo off
 setlocal
 
@@ -13,7 +14,7 @@ $form.MaximizeBox = $false; ^
 $form.BackColor = [System.Drawing.Color]::FromArgb(30,30,30); ^
 
 $title = New-Object System.Windows.Forms.Label; ^
-$title.Text = 'Vitajte Otec Boris!'; ^
+$title.Text = 'Vitajte ' + $env:USERNAME + '!'; ^
 $title.ForeColor = [System.Drawing.Color]::White; ^
 $title.Font = New-Object System.Drawing.Font('Segoe UI',20,[System.Drawing.FontStyle]::Bold); ^
 $title.AutoSize = $true; ^
@@ -42,3 +43,4 @@ $form.Controls.Add($vsetko); ^
 
 endlocal
 exit /b
+```
